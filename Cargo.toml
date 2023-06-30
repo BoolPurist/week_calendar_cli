@@ -1,0 +1,16 @@
+[package]
+name = "week_calendar"
+version = "0.1.0"
+edition = "2021"
+license = "MIT or Apache 2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+date_validation_types = { git = "https://github.com/BoolPurist/date_validation_types.git", tag = "v1.0.0" }
+
+chrono = "0.4.26"
+clap = { version = "4.3.9", features = ["derive"] }
+derive-getters = "0.3.0"
+prettytable = "0.10.0"
