@@ -4,7 +4,10 @@ use date_validation_types::{
 };
 
 mod given_date;
+mod given_month;
 pub use given_date::GivenDate;
+
+use self::given_month::GivenMonth;
 
 #[derive(Parser)]
 #[command(author, version, about = "Shows calendar week")]
@@ -20,6 +23,8 @@ pub enum SubCommands {
     Today,
     #[command(visible_alias = "d")]
     Date(GivenDate),
+    #[command(visible_alias = "m")]
+    Month(GivenMonth),
 }
 
 pub fn to_validated_day(input: &str) -> Result<ValidatedDay, String> {
