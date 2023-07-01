@@ -1,0 +1,31 @@
+---
+source: src/week_with_calendar_number.rs
+expression: actual
+---
+[
+    WeekWithCalendarNumber {
+        week: 48,
+        monday: 2022-11-28,
+        sunday: 2022-12-04,
+    },
+    WeekWithCalendarNumber {
+        week: 49,
+        monday: 2022-12-05,
+        sunday: 2022-12-11,
+    },
+    WeekWithCalendarNumber {
+        week: 50,
+        monday: 2022-12-12,
+        sunday: 2022-12-18,
+    },
+    WeekWithCalendarNumber {
+        week: 51,
+        monday: 2022-12-19,
+        sunday: 2022-12-25,
+    },
+    WeekWithCalendarNumber {
+        week: 52,
+        monday: 2022-12-26,
+        sunday: 2023-01-01,
+    },
+]

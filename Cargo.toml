@@ -1,6 +1,6 @@
 [package]
 name = "week_calendar"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "MIT or Apache 2.0"
 rust-version = "1.64.0"
@@ -15,3 +15,6 @@ chrono = "0.4.26"
 clap = { version = "4.3.9", features = ["derive"] }
 derive-getters = "0.3.0"
 prettytable = "0.10.0"
+
+[dev-dependencies]
+insta = { version = "1.30.0" }
