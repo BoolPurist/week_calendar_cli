@@ -2,7 +2,7 @@ use std::process::ExitCode;
 
 use chrono::{Datelike, Local, NaiveDate};
 use clap::Parser;
-use date_validation_types::{InvalidDate, ValidatedDate};
+use date_validation_types::{ValidatedDate, ValidatedYear};
 use week_calendar::cli::{CliApp, SubCommands};
 use week_calendar::WeekWithCalendarNumber;
 fn main() -> ExitCode {
@@ -21,7 +21,7 @@ fn main() -> ExitCode {
     }
 }
 
-fn handle_sub_command(cli_args: CliApp) -> Result<String, InvalidDate> {
+fn handle_sub_command(cli_args: CliApp) -> Result<String, Box<dyn std::error::Error>> {
     let table = match cli_args.sub_command {
         SubCommands::Today => {
             let today = WeekWithCalendarNumber::today();
@@ -42,6 +42,18 @@ fn handle_sub_command(cli_args: CliApp) -> Result<String, InvalidDate> {
             };
 
             week_calendar::week_calendar_into_table(date.into_iter())
+        }
+        SubCommands::Year(given_year) => {
+            let dates: Vec<WeekWithCalendarNumber> = given_year
+                .year()
+                .map(WeekWithCalendarNumber::all_new_in_year)
+                .unwrap_or_else(|| {
+                    let year = Local::now().naive_local().date().year();
+                    let now: ValidatedYear = (year as u32).try_into().unwrap();
+                    WeekWithCalendarNumber::all_new_in_year(now)
+                });
+
+            week_calendar::week_calendar_into_table(dates.into_iter())
         }
     };
     Ok(table.to_string())

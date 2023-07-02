@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+### Added 
+
+- Can look up all calendar weeks in current year
+- Can look up all calendar weeks in given year
+
 ## [0.1.1] - 2023.07.01
 
 ### Added 

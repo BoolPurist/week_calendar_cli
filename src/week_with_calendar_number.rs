@@ -33,14 +33,32 @@ impl WeekWithCalendarNumber {
 
     pub fn all_new_in_month(date: impl Into<NaiveDate>) -> Vec<Self> {
         let date: NaiveDate = date.into();
-        dbg!(date);
-        let last_date_of_month = Self::get_last_day_current_month(date);
+        let last_date_of_month = Self::last_day_current_month(date);
         let month = date.month();
-        let first_week = NaiveDate::from_ymd_opt(date.year(), month, 1).unwrap();
-        let mut current_week = first_week.week(Weekday::Mon).first_day();
-        let mut weeks: Vec<Self> = Vec::with_capacity(6);
+        let first_week = NaiveDate::from_ymd_opt(date.year(), month, 1)
+            .expect("year and month come from a valid date. Every month has its 1. day.");
+        let current_week = first_week.week(Weekday::Mon).first_day();
 
-        while current_week <= last_date_of_month {
+        Self::get_all_weeks_until_monday_old_enough(current_week, last_date_of_month)
+    }
+
+    pub fn all_new_in_year(year: impl Into<ValidatedYear>) -> Vec<Self> {
+        let year: ValidatedYear = year.into();
+        let year = u32::from(year) as i32;
+        let last_date_of_year = NaiveDate::from_ymd_opt(year, 12, 31).unwrap();
+
+        let first_week = NaiveDate::from_ymd_opt(year, 1, 1)
+            .expect("year and month come from a valid date. Every month has its 1. day.");
+        let current_week = first_week.week(Weekday::Mon).first_day();
+
+        Self::get_all_weeks_until_monday_old_enough(current_week, last_date_of_year)
+    }
+
+    fn get_all_weeks_until_monday_old_enough(monday: NaiveDate, threshold: NaiveDate) -> Vec<Self> {
+        let mut weeks: Vec<Self> = Default::default();
+        let mut current_week = monday;
+
+        while current_week <= threshold {
             weeks.push(Self::new(current_week));
             current_week = current_week.week(Weekday::Mon).last_day() + chrono::Duration::days(1);
         }
@@ -48,7 +66,14 @@ impl WeekWithCalendarNumber {
         weeks
     }
 
-    fn get_last_day_current_month(date: NaiveDate) -> NaiveDate {
+    /// # Summary
+    ///
+    /// Gets last day of the month of a given date.
+    ///
+    /// # Example
+    ///
+    /// 2020-01-14 => 2020-01-31
+    fn last_day_current_month(date: NaiveDate) -> NaiveDate {
         let (next_month, next_year) = {
             let mut next_year = date.year();
             let next_month = if date.month() == 12 {
@@ -127,5 +152,18 @@ mod testing {
             NaiveDate::from_ymd_opt(2022, 12, 10).unwrap(),
         );
         insta::assert_debug_snapshot!(actual);
+    }
+    #[test]
+    fn last_day_current_month() {
+        let current_day = NaiveDate::from_ymd_opt(2020, 1, 14).unwrap();
+        let last_day_of_current_month = WeekWithCalendarNumber::last_day_current_month(current_day);
+        let expected = NaiveDate::from_ymd_opt(2020, 1, 31).unwrap();
+        assert_eq!(expected, last_day_of_current_month);
+    }
+    #[test]
+    fn all_weeks_in_year_1992() {
+        let date: ValidatedYear = 1992.try_into().unwrap();
+        let result = WeekWithCalendarNumber::all_new_in_year(date);
+        insta::assert_debug_snapshot!(result);
     }
 }

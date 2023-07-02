@@ -1,0 +1,271 @@
+---
+source: src/week_with_calendar_number.rs
+expression: result
+---
+[
+    WeekWithCalendarNumber {
+        week: 52,
+        monday: 1991-12-30,
+        sunday: 1992-01-05,
+    },
+    WeekWithCalendarNumber {
+        week: 1,
+        monday: 1992-01-06,
+        sunday: 1992-01-12,
+    },
+    WeekWithCalendarNumber {
+        week: 2,
+        monday: 1992-01-13,
+        sunday: 1992-01-19,
+    },
+    WeekWithCalendarNumber {
+        week: 3,
+        monday: 1992-01-20,
+        sunday: 1992-01-26,
+    },
+    WeekWithCalendarNumber {
+        week: 4,
+        monday: 1992-01-27,
+        sunday: 1992-02-02,
+    },
+    WeekWithCalendarNumber {
+        week: 5,
+        monday: 1992-02-03,
+        sunday: 1992-02-09,
+    },
+    WeekWithCalendarNumber {
+        week: 6,
+        monday: 1992-02-10,
+        sunday: 1992-02-16,
+    },
+    WeekWithCalendarNumber {
+        week: 7,
+        monday: 1992-02-17,
+        sunday: 1992-02-23,
+    },
+    WeekWithCalendarNumber {
+        week: 8,
+        monday: 1992-02-24,
+        sunday: 1992-03-01,
+    },
+    WeekWithCalendarNumber {
+        week: 9,
+        monday: 1992-03-02,
+        sunday: 1992-03-08,
+    },
+    WeekWithCalendarNumber {
+        week: 10,
+        monday: 1992-03-09,
+        sunday: 1992-03-15,
+    },
+    WeekWithCalendarNumber {
+        week: 11,
+        monday: 1992-03-16,
+        sunday: 1992-03-22,
+    },
+    WeekWithCalendarNumber {
+        week: 12,
+        monday: 1992-03-23,
+        sunday: 1992-03-29,
+    },
+    WeekWithCalendarNumber {
+        week: 13,
+        monday: 1992-03-30,
+        sunday: 1992-04-05,
+    },
+    WeekWithCalendarNumber {
+        week: 14,
+        monday: 1992-04-06,
+        sunday: 1992-04-12,
+    },
+    WeekWithCalendarNumber {
+        week: 15,
+        monday: 1992-04-13,
+        sunday: 1992-04-19,
+    },
+    WeekWithCalendarNumber {
+        week: 16,
+        monday: 1992-04-20,
+        sunday: 1992-04-26,
+    },
+    WeekWithCalendarNumber {
+        week: 17,
+        monday: 1992-04-27,
+        sunday: 1992-05-03,
+    },
+    WeekWithCalendarNumber {
+        week: 18,
+        monday: 1992-05-04,
+        sunday: 1992-05-10,
+    },
+    WeekWithCalendarNumber {
+        week: 19,
+        monday: 1992-05-11,
+        sunday: 1992-05-17,
+    },
+    WeekWithCalendarNumber {
+        week: 20,
+        monday: 1992-05-18,
+        sunday: 1992-05-24,
+    },
+    WeekWithCalendarNumber {
+        week: 21,
+        monday: 1992-05-25,
+        sunday: 1992-05-31,
+    },
+    WeekWithCalendarNumber {
+        week: 22,
+        monday: 1992-06-01,
+        sunday: 1992-06-07,
+    },
+    WeekWithCalendarNumber {
+        week: 23,
+        monday: 1992-06-08,
+        sunday: 1992-06-14,
+    },
+    WeekWithCalendarNumber {
+        week: 24,
+        monday: 1992-06-15,
+        sunday: 1992-06-21,
+    },
+    WeekWithCalendarNumber {
+        week: 25,
+        monday: 1992-06-22,
+        sunday: 1992-06-28,
+    },
+    WeekWithCalendarNumber {
+        week: 26,
+        monday: 1992-06-29,
+        sunday: 1992-07-05,
+    },
+    WeekWithCalendarNumber {
+        week: 27,
+        monday: 1992-07-06,
+        sunday: 1992-07-12,
+    },
+    WeekWithCalendarNumber {
+        week: 28,
+        monday: 1992-07-13,
+        sunday: 1992-07-19,
+    },
+    WeekWithCalendarNumber {
+        week: 29,
+        monday: 1992-07-20,
+        sunday: 1992-07-26,
+    },
+    WeekWithCalendarNumber {
+        week: 30,
+        monday: 1992-07-27,
+        sunday: 1992-08-02,
+    },
+    WeekWithCalendarNumber {
+        week: 31,
+        monday: 1992-08-03,
+        sunday: 1992-08-09,
+    },
+    WeekWithCalendarNumber {
+        week: 32,
+        monday: 1992-08-10,
+        sunday: 1992-08-16,
+    },
+    WeekWithCalendarNumber {
+        week: 33,
+        monday: 1992-08-17,
+        sunday: 1992-08-23,
+    },
+    WeekWithCalendarNumber {
+        week: 34,
+        monday: 1992-08-24,
+        sunday: 1992-08-30,
+    },
+    WeekWithCalendarNumber {
+        week: 35,
+        monday: 1992-08-31,
+        sunday: 1992-09-06,
+    },
+    WeekWithCalendarNumber {
+        week: 36,
+        monday: 1992-09-07,
+        sunday: 1992-09-13,
+    },
+    WeekWithCalendarNumber {
+        week: 37,
+        monday: 1992-09-14,
+        sunday: 1992-09-20,
+    },
+    WeekWithCalendarNumber {
+        week: 38,
+        monday: 1992-09-21,
+        sunday: 1992-09-27,
+    },
+    WeekWithCalendarNumber {
+        week: 39,
+        monday: 1992-09-28,
+        sunday: 1992-10-04,
+    },
+    WeekWithCalendarNumber {
+        week: 40,
+        monday: 1992-10-05,
+        sunday: 1992-10-11,
+    },
+    WeekWithCalendarNumber {
+        week: 41,
+        monday: 1992-10-12,
+        sunday: 1992-10-18,
+    },
+    WeekWithCalendarNumber {
+        week: 42,
+        monday: 1992-10-19,
+        sunday: 1992-10-25,
+    },
+    WeekWithCalendarNumber {
+        week: 43,
+        monday: 1992-10-26,
+        sunday: 1992-11-01,
+    },
+    WeekWithCalendarNumber {
+        week: 44,
+        monday: 1992-11-02,
+        sunday: 1992-11-08,
+    },
+    WeekWithCalendarNumber {
+        week: 45,
+        monday: 1992-11-09,
+        sunday: 1992-11-15,
+    },
+    WeekWithCalendarNumber {
+        week: 46,
+        monday: 1992-11-16,
+        sunday: 1992-11-22,
+    },
+    WeekWithCalendarNumber {
+        week: 47,
+        monday: 1992-11-23,
+        sunday: 1992-11-29,
+    },
+    WeekWithCalendarNumber {
+        week: 48,
+        monday: 1992-11-30,
+        sunday: 1992-12-06,
+    },
+    WeekWithCalendarNumber {
+        week: 49,
+        monday: 1992-12-07,
+        sunday: 1992-12-13,
+    },
+    WeekWithCalendarNumber {
+        week: 50,
+        monday: 1992-12-14,
+        sunday: 1992-12-20,
+    },
+    WeekWithCalendarNumber {
+        week: 51,
+        monday: 1992-12-21,
+        sunday: 1992-12-27,
+    },
+    WeekWithCalendarNumber {
+        week: 52,
+        monday: 1992-12-28,
+        sunday: 1993-01-03,
+    },
+]
