@@ -14,7 +14,7 @@ cargo install --path=. --force
 
 ## Examples
 
-Examples for usage can be found here [./Examples.md].
+Examples for usage can be found  [here](./Examples.md).
 
 ## Licenses
 
