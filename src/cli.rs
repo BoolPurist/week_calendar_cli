@@ -5,12 +5,17 @@ use date_validation_types::{
 
 mod given_date;
 mod given_month;
+mod given_year;
 pub use given_date::GivenDate;
+pub use given_year::GivenYear;
 
 use self::given_month::GivenMonth;
 
 #[derive(Parser)]
-#[command(author, version, about = "Shows calendar week")]
+#[command(author = "BoolPurist", version)]
+/// Lists calendar week at a certain time or in a monthly/yearly interveral.
+///
+/// Source code and example of useage can be found at: https://github.com/BoolPurist/week_calendar_cli
 pub struct CliApp {
     #[command(subcommand)]
     pub sub_command: SubCommands,
@@ -25,6 +30,8 @@ pub enum SubCommands {
     Date(GivenDate),
     #[command(visible_alias = "m")]
     Month(GivenMonth),
+    #[command(visible_alias = "y")]
+    Year(GivenYear),
 }
 
 pub fn to_validated_day(input: &str) -> Result<ValidatedDay, String> {
