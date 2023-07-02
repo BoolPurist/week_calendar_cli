@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+## [0.1.2] - 2023.07.02
+
 ### Added 
 
 - Can look up all calendar weeks in current year
@@ -27,6 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Can look up calendar week of today
 - Can look up calendar week of a given date
 
-[unreleased]: https://github.com/BoolPurist/week_calendar_cli/compare/v0.1.1...HEAD
+[unreleased]: https://github.com/BoolPurist/week_calendar_cli/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/BoolPurist/week_calendar_cli/releases/tag/v0.1.2 
 [0.1.1]: https://github.com/BoolPurist/week_calendar_cli/releases/tag/v0.1.1 
 [0.1.0]: https://github.com/BoolPurist/week_calendar_cli/releases/tag/v0.1.0

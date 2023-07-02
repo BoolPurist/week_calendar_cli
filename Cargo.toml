@@ -1,7 +1,7 @@
 [package]
 name = "week_calendar"
 authors = ["BoolPurist"]
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 license = "MIT or Apache 2.0"
 rust-version = "1.64.0"
