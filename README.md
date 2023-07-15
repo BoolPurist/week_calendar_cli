@@ -18,6 +18,7 @@ cargo install --path=. --force
 
 ## Examples
 
+<<<<<<< HEAD
 Here little demonstration of the appliaction 
 
 
@@ -35,7 +36,7 @@ Output:
 +-------------+------------+------------+
 ```
 
-More examples for usage can be found here [./Examples.md].
+More examples for usage can be found here [here](./Examples.md).
 
 ## Licenses
 
