@@ -18,7 +18,6 @@ cargo install --path=. --force
 
 ## Examples
 
-<<<<<<< HEAD
 Here little demonstration of the appliaction 
 
 
