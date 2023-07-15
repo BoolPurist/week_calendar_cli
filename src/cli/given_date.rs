@@ -4,7 +4,7 @@ use date_validation_types::{
 };
 
 #[derive(Debug, Args)]
-/// Shows calendar week of a given date
+/// Shows calendar week of a given date.
 /// Given date must be a valid date. Example: 30.02.2023 is not valid.
 pub struct GivenDate {
     #[arg(value_parser = super::to_validated_year)]

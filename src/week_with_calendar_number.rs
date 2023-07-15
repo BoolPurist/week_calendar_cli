@@ -4,13 +4,13 @@ use derive_getters::Getters;
 use prettytable::{row, Row};
 
 #[derive(Getters, Debug)]
-pub struct WeekWithCalendarNumber {
+pub struct WeekCalendarNumber {
     week: u32,
     monday: NaiveDate,
     sunday: NaiveDate,
 }
 
-impl WeekWithCalendarNumber {
+impl WeekCalendarNumber {
     pub fn new(date: impl Into<NaiveDate>) -> Self {
         let date: NaiveDate = date.into();
         let first_day_of_year = NaiveDate::from_ymd_opt(date.year(), 1, 1).unwrap();
@@ -90,12 +90,12 @@ impl WeekWithCalendarNumber {
     }
 }
 
-impl From<WeekWithCalendarNumber> for Row {
-    fn from(value: WeekWithCalendarNumber) -> Self {
+impl From<WeekCalendarNumber> for Row {
+    fn from(value: WeekCalendarNumber) -> Self {
         row![value.week, value.monday, value.sunday]
     }
 }
-impl From<NaiveDate> for WeekWithCalendarNumber {
+impl From<NaiveDate> for WeekCalendarNumber {
     fn from(value: NaiveDate) -> Self {
         let year = value.year() as u32;
         let year: ValidatedYear = year.try_into().unwrap();
@@ -110,7 +110,7 @@ mod testing {
     use super::*;
     #[test]
     fn new_with_calendar_week_and_monday_and_sunday() {
-        let actual = WeekWithCalendarNumber::new(ValidatedDate::from_ymd(2023, 6, 30).unwrap());
+        let actual = WeekCalendarNumber::new(ValidatedDate::from_ymd(2023, 6, 30).unwrap());
 
         assert_eq!(26, actual.week);
         assert_eq!(NaiveDate::from_ymd_opt(2023, 6, 26).unwrap(), actual.monday);
@@ -118,7 +118,7 @@ mod testing {
     }
     #[test]
     fn new_with_calendar_single_week_1_1_2020() {
-        let actual = WeekWithCalendarNumber::new(ValidatedDate::from_ymd(2020, 1, 1).unwrap());
+        let actual = WeekCalendarNumber::new(ValidatedDate::from_ymd(2020, 1, 1).unwrap());
 
         assert_eq!(1, actual.week);
         assert_eq!(
@@ -130,40 +130,38 @@ mod testing {
     #[test]
     fn new_within_monts() {
         let actual =
-            WeekWithCalendarNumber::all_new_in_month(ValidatedDate::from_ymd(2023, 6, 30).unwrap());
+            WeekCalendarNumber::all_new_in_month(ValidatedDate::from_ymd(2023, 6, 30).unwrap());
         insta::assert_debug_snapshot!(actual);
     }
     #[test]
     fn new_within_months_from_earlier_year() {
         let actual =
-            WeekWithCalendarNumber::all_new_in_month(ValidatedDate::from_ymd(2023, 1, 1).unwrap());
+            WeekCalendarNumber::all_new_in_month(ValidatedDate::from_ymd(2023, 1, 1).unwrap());
         insta::assert_debug_snapshot!(actual);
     }
     #[test]
     fn new_within_months_at_end_of_year_2023() {
-        let actual = WeekWithCalendarNumber::all_new_in_month(
-            NaiveDate::from_ymd_opt(2023, 12, 29).unwrap(),
-        );
+        let actual =
+            WeekCalendarNumber::all_new_in_month(NaiveDate::from_ymd_opt(2023, 12, 29).unwrap());
         insta::assert_debug_snapshot!(actual);
     }
     #[test]
     fn new_within_months_at_end_of_year_2022() {
-        let actual = WeekWithCalendarNumber::all_new_in_month(
-            NaiveDate::from_ymd_opt(2022, 12, 10).unwrap(),
-        );
+        let actual =
+            WeekCalendarNumber::all_new_in_month(NaiveDate::from_ymd_opt(2022, 12, 10).unwrap());
         insta::assert_debug_snapshot!(actual);
     }
     #[test]
     fn last_day_current_month() {
         let current_day = NaiveDate::from_ymd_opt(2020, 1, 14).unwrap();
-        let last_day_of_current_month = WeekWithCalendarNumber::last_day_current_month(current_day);
+        let last_day_of_current_month = WeekCalendarNumber::last_day_current_month(current_day);
         let expected = NaiveDate::from_ymd_opt(2020, 1, 31).unwrap();
         assert_eq!(expected, last_day_of_current_month);
     }
     #[test]
     fn all_weeks_in_year_1992() {
         let date: ValidatedYear = 1992.try_into().unwrap();
-        let result = WeekWithCalendarNumber::all_new_in_year(date);
+        let result = WeekCalendarNumber::all_new_in_year(date);
         insta::assert_debug_snapshot!(result);
     }
 }

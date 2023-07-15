@@ -1,8 +1,20 @@
 # Examples of subcommands
 
-## today
+## Make output easy to parse
 
-Look up calendar week for today. Examples today is 04.07.2023. 
+```sh
+week_calendar --for-machine date 2023 7 3
+```
+
+Output:
+
+```text
+27 2023-07-03 2023-07-09
+```
+
+## Show current week calendar 
+
+Examples today is 04.07.2023. 
 
 ```sh
 week_calendar today
@@ -20,9 +32,9 @@ Output:
 
 ---
 
-## date
+## Show week calendar in which a specific date resides
 
-Look up calendar week for a given date, here 30th of June in 2023
+30th of June in 2023 is given here.
 
 ```sh
 week_calendar date 2023 6 30
@@ -40,9 +52,9 @@ Output:
 
 ---
 
-## month
+## Show all calendar weeks of the current month
 
-Look up all calendar weeks within current month. Example assumes today is 8th of august in 2023.
+Example assumes today is 8th of august in 2023.
 
 ```sh
 week_calendar month
@@ -68,7 +80,9 @@ Output:
 
 ---
 
-Look up all calendar weeks for a given month in the current year. Here the given month is April in 2023 as current year.
+## Show all calendar weeks of a given month in the current year
+
+Here the given month is April in 2023 as current year.
 
 ```sh
 week_calendar month 4
@@ -94,7 +108,9 @@ Output:
 
 ---
 
-Look up all calendar weeks for a given month in a given year. Here the given month is May in 1990 as given year.
+## Show all calendar weeks of a given month in a given year
+
+Here the given month is May in 1990 as given year.
 
 ```sh
 week_calendar month 3 1990
@@ -120,9 +136,9 @@ Output:
 
 --- 
 
-## year
+## Show all calendar weeks in the current year
 
-Look up all calendar weeks for current year. Here the current year is 2023.
+Here the current year is 2023.
 
 ```sh
 week_calendar year 
@@ -244,7 +260,9 @@ Output:
 
 --- 
 
-Look up all calendar weeks for given year. Here the given year is 1992.
+## Show all week calendar in the given year
+
+Here the given year is 1992.
 
 ```sh
 week_calendar year 1992

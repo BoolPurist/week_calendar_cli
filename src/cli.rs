@@ -17,6 +17,10 @@ use self::given_month::GivenMonth;
 ///
 /// Source code and example of useage can be found at: https://github.com/BoolPurist/week_calendar_cli
 pub struct CliApp {
+    /// Data entry about week calendar are outputed with spaces between.
+    /// This is intended to make parsing of the date easier.
+    #[arg(short, long, env = "WEEK_CALENDAR_FOR_MACHINE")]
+    pub for_machine: bool,
     #[command(subcommand)]
     pub sub_command: SubCommands,
 }

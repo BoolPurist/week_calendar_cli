@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+### Added 
+
+- Option to output space separated output. Makes calendar weeks easier to parse. 
+
 ## [0.1.2] - 2023.07.02
 
 ### Added 

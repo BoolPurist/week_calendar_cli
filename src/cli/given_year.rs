@@ -7,6 +7,6 @@ use derive_getters::Getters;
 /// assumed
 pub struct GivenYear {
     #[arg(value_parser = super::to_validated_year)]
-    /// Day of a date. Must be between 1 and 31
+    /// Given year. If omited then the current year is assumed.
     year: Option<ValidatedYear>,
 }

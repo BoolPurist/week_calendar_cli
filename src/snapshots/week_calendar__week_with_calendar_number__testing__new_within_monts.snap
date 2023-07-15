@@ -3,27 +3,27 @@ source: src/week_with_calendar_number.rs
 expression: actual
 ---
 [
-    WeekWithCalendarNumber {
+    WeekCalendarNumber {
         week: 22,
         monday: 2023-05-29,
         sunday: 2023-06-04,
     },
-    WeekWithCalendarNumber {
+    WeekCalendarNumber {
         week: 23,
         monday: 2023-06-05,
         sunday: 2023-06-11,
     },
-    WeekWithCalendarNumber {
+    WeekCalendarNumber {
         week: 24,
         monday: 2023-06-12,
         sunday: 2023-06-18,
     },
-    WeekWithCalendarNumber {
+    WeekCalendarNumber {
         week: 25,
         monday: 2023-06-19,
         sunday: 2023-06-25,
     },
-    WeekWithCalendarNumber {
+    WeekCalendarNumber {
         week: 26,
         monday: 2023-06-26,
         sunday: 2023-07-02,
