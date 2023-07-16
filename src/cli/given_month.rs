@@ -1,5 +1,5 @@
 use clap::Args;
-use date_validation_types::{ValidatedMonth, ValidatedYear};
+use date_validation_types::units::{ValidatedMonth, ValidatedYear};
 use derive_getters::Getters;
 
 #[derive(Args, Debug, Getters)]

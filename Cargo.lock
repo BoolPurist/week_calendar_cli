@@ -206,8 +206,9 @@ dependencies = [
 
 [[package]]
 name = "date_validation_types"
-version = "1.0.0"
-source = "git+https://github.com/BoolPurist/date_validation_types.git?tag=v1.0.0#c251f7ddd911253639c8c6d9c381ba88ee5f97b0"
+version = "2.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1987aa6d30892a611655597257f9adb662ff125d038562a0e859a9988e170282"
 dependencies = [
  "chrono",
  "derive_more",

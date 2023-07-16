@@ -2,7 +2,7 @@ use std::process::ExitCode;
 
 use chrono::{Datelike, Local, NaiveDate};
 use clap::Parser;
-use date_validation_types::{ValidatedDate, ValidatedYear};
+use date_validation_types::prelude::*;
 use week_calendar::cli::{CliApp, SubCommands};
 use week_calendar::{WeekCalendarDisplay, WeekCalendarNumber};
 fn main() -> ExitCode {

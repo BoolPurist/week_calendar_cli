@@ -1,5 +1,5 @@
 use clap::Args;
-use date_validation_types::{
+use date_validation_types::units::{
     InvalidDate, ValidatedDate, ValidatedDay, ValidatedMonth, ValidatedYear,
 };
 

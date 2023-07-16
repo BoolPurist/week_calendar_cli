@@ -1,5 +1,5 @@
 use chrono::{Datelike, Local, NaiveDate, Weekday};
-use date_validation_types::{ValidatedDate, ValidatedDay, ValidatedMonth, ValidatedYear};
+use date_validation_types::units::{ValidatedDate, ValidatedYear};
 use derive_getters::Getters;
 use prettytable::{row, Row};
 
@@ -97,11 +97,8 @@ impl From<WeekCalendarNumber> for Row {
 }
 impl From<NaiveDate> for WeekCalendarNumber {
     fn from(value: NaiveDate) -> Self {
-        let year = value.year() as u32;
-        let year: ValidatedYear = year.try_into().unwrap();
-        let month: ValidatedMonth = value.month().try_into().unwrap();
-        let day: ValidatedDay = value.day().try_into().unwrap();
-        Self::new(ValidatedDate::new(year, month, day).unwrap())
+        let validated_date: ValidatedDate = value.into();
+        Self::new(validated_date)
     }
 }
 
