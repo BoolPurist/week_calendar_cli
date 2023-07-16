@@ -6,16 +6,6 @@
 It provides the number of week and from which day it starts and on which day a week ends.
 Different intervals can be chosen. Year, month, or just one specific week.
 
-## How to install it
-
-1. Clone this repository
-2. Go into to the cloned folder
-3. Type the following command into the terminal
-
-```sh
-cargo install --path=. --force
-```
-
 ## Examples
 
 Here little demonstration of the appliaction 
@@ -36,6 +26,38 @@ Output:
 ```
 
 More examples for usage can be found here [here](./Examples.md).
+
+## Current version
+
+Current version is 0.1.3
+
+Version on crates.io and the last git [tag](https://github.com/BoolPurist/week_calendar_cli/releases/tag/v0.1.3) 
+correspond to the current version. 
+
+## How to install it
+
+### Install from crates.io
+
+This appliaction is also published on this [page](https://crates.io/crates/week_calendar) of crates.io 
+
+You can install via 
+```sh
+cargo install week_calendar
+```
+
+### Install it from source
+
+1. Clone this repository
+2. Go into to the cloned folder
+3. Type the following command into the terminal
+
+```sh
+cargo install --path=. --force
+```
+
+## Changelog 
+
+Changelog can be found [here](./CHANGELOG.md)
 
 ## Licenses
 
