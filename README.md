@@ -1,6 +1,7 @@
 # Purpose
 
 [![Build status](https://github.com/BoolPurist/week_calendar_cli/actions/workflows/ci_check.yml/badge.svg)](https://github.com/boolpurist/week_calendar_cli/actions)
+[![Crates.io](https://img.shields.io/crates/v/week_calendar.svg)](https://crates.io/crates/week_calendar)
 
 **week_calendar** is a command line tool which shows calendar weeks. 
 It provides the number of week and from which day it starts and on which day a week ends.
@@ -35,6 +36,15 @@ Version on crates.io and the last git [tag](https://github.com/BoolPurist/week_c
 correspond to the current version. 
 
 ## How to install it
+
+### Download a pre-built binary
+
+There are pre-built binaries for the following targets under the latest [release](https://github.com/BoolPurist/week_calendar_cli/releases/tag/v0.1.3):
+
+- x86_64-unknown-linux-gnu => Linux 64 Bit
+
+After downloading the archive and unpacking it. Put the binary to a location 
+which is in your PATH environmental variable.
 
 ### Install from crates.io
 
