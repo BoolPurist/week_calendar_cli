@@ -3,28 +3,38 @@ source: src/week_with_calendar_number.rs
 expression: actual
 ---
 [
-    WeekCalendarNumber {
-        week: 2022-W48,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            48,
+        ),
         monday: 2022-11-28,
         sunday: 2022-12-04,
     },
-    WeekCalendarNumber {
-        week: 2022-W49,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            49,
+        ),
         monday: 2022-12-05,
         sunday: 2022-12-11,
     },
-    WeekCalendarNumber {
-        week: 2022-W50,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            50,
+        ),
         monday: 2022-12-12,
         sunday: 2022-12-18,
     },
-    WeekCalendarNumber {
-        week: 2022-W51,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            51,
+        ),
         monday: 2022-12-19,
         sunday: 2022-12-25,
     },
-    WeekCalendarNumber {
-        week: 2022-W52,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            52,
+        ),
         monday: 2022-12-26,
         sunday: 2023-01-01,
     },

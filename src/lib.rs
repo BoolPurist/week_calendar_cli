@@ -1,15 +1,16 @@
 use prettytable::{row, Row, Table};
 
-pub use week_calendar_result::WeekCalendarDisplay;
-pub use week_with_calendar_number::WeekCalendarNumber;
+pub use simple_parseable_week_calendar::CalendarWeekForDisplay;
+pub use week_with_calendar_number::WeekCalendar;
 pub mod chrono_utils;
 pub mod cli;
 
+pub mod calendar_week_operations;
+mod simple_parseable_week_calendar;
 mod validated_week_number;
-mod week_calendar_result;
 mod week_with_calendar_number;
 
-pub fn week_calendar_into_table(weeks: impl IntoIterator<Item = WeekCalendarDisplay>) -> Table {
+pub fn week_calendar_into_table(weeks: impl IntoIterator<Item = CalendarWeekForDisplay>) -> Table {
     let mut table = Table::new();
 
     table.add_row(row!["Week Number", "From", "To"]);

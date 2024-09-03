@@ -33,3 +33,4 @@ thiserror = "1.0.63"
 
 [dev-dependencies]
 insta = { version = "1.30.0" }
+pretty_assertions = "1.4.0"

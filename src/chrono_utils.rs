@@ -1,4 +1,4 @@
-use chrono::{Datelike, Days, IsoWeek, Local, NaiveDate, Weekday};
+use chrono::{Datelike, Days, Local, NaiveDate, Weekday};
 use date_validation_types::units::ValidatedYear;
 
 use crate::validated_week_number::ValidatedWeekNumber;
@@ -6,6 +6,7 @@ use crate::validated_week_number::ValidatedWeekNumber;
 pub fn get_today_date() -> NaiveDate {
     Local::now().naive_local().date()
 }
+
 pub fn get_current_year() -> ValidatedYear {
     let year = get_today_date().year() as u32;
     ValidatedYear::new(year).unwrap()

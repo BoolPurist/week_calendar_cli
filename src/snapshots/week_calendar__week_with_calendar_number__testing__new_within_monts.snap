@@ -3,28 +3,38 @@ source: src/week_with_calendar_number.rs
 expression: actual
 ---
 [
-    WeekCalendarNumber {
-        week: 2023-W22,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            22,
+        ),
         monday: 2023-05-29,
         sunday: 2023-06-04,
     },
-    WeekCalendarNumber {
-        week: 2023-W23,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            23,
+        ),
         monday: 2023-06-05,
         sunday: 2023-06-11,
     },
-    WeekCalendarNumber {
-        week: 2023-W24,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            24,
+        ),
         monday: 2023-06-12,
         sunday: 2023-06-18,
     },
-    WeekCalendarNumber {
-        week: 2023-W25,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            25,
+        ),
         monday: 2023-06-19,
         sunday: 2023-06-25,
     },
-    WeekCalendarNumber {
-        week: 2023-W26,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            26,
+        ),
         monday: 2023-06-26,
         sunday: 2023-07-02,
     },

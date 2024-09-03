@@ -3,268 +3,374 @@ source: src/week_with_calendar_number.rs
 expression: result
 ---
 [
-    WeekCalendarNumber {
-        week: 1992-W01,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            1,
+        ),
         monday: 1991-12-30,
         sunday: 1992-01-05,
     },
-    WeekCalendarNumber {
-        week: 1992-W02,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            2,
+        ),
         monday: 1992-01-06,
         sunday: 1992-01-12,
     },
-    WeekCalendarNumber {
-        week: 1992-W03,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            3,
+        ),
         monday: 1992-01-13,
         sunday: 1992-01-19,
     },
-    WeekCalendarNumber {
-        week: 1992-W04,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            4,
+        ),
         monday: 1992-01-20,
         sunday: 1992-01-26,
     },
-    WeekCalendarNumber {
-        week: 1992-W05,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            5,
+        ),
         monday: 1992-01-27,
         sunday: 1992-02-02,
     },
-    WeekCalendarNumber {
-        week: 1992-W06,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            6,
+        ),
         monday: 1992-02-03,
         sunday: 1992-02-09,
     },
-    WeekCalendarNumber {
-        week: 1992-W07,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            7,
+        ),
         monday: 1992-02-10,
         sunday: 1992-02-16,
     },
-    WeekCalendarNumber {
-        week: 1992-W08,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            8,
+        ),
         monday: 1992-02-17,
         sunday: 1992-02-23,
     },
-    WeekCalendarNumber {
-        week: 1992-W09,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            9,
+        ),
         monday: 1992-02-24,
         sunday: 1992-03-01,
     },
-    WeekCalendarNumber {
-        week: 1992-W10,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            10,
+        ),
         monday: 1992-03-02,
         sunday: 1992-03-08,
     },
-    WeekCalendarNumber {
-        week: 1992-W11,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            11,
+        ),
         monday: 1992-03-09,
         sunday: 1992-03-15,
     },
-    WeekCalendarNumber {
-        week: 1992-W12,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            12,
+        ),
         monday: 1992-03-16,
         sunday: 1992-03-22,
     },
-    WeekCalendarNumber {
-        week: 1992-W13,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            13,
+        ),
         monday: 1992-03-23,
         sunday: 1992-03-29,
     },
-    WeekCalendarNumber {
-        week: 1992-W14,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            14,
+        ),
         monday: 1992-03-30,
         sunday: 1992-04-05,
     },
-    WeekCalendarNumber {
-        week: 1992-W15,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            15,
+        ),
         monday: 1992-04-06,
         sunday: 1992-04-12,
     },
-    WeekCalendarNumber {
-        week: 1992-W16,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            16,
+        ),
         monday: 1992-04-13,
         sunday: 1992-04-19,
     },
-    WeekCalendarNumber {
-        week: 1992-W17,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            17,
+        ),
         monday: 1992-04-20,
         sunday: 1992-04-26,
     },
-    WeekCalendarNumber {
-        week: 1992-W18,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            18,
+        ),
         monday: 1992-04-27,
         sunday: 1992-05-03,
     },
-    WeekCalendarNumber {
-        week: 1992-W19,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            19,
+        ),
         monday: 1992-05-04,
         sunday: 1992-05-10,
     },
-    WeekCalendarNumber {
-        week: 1992-W20,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            20,
+        ),
         monday: 1992-05-11,
         sunday: 1992-05-17,
     },
-    WeekCalendarNumber {
-        week: 1992-W21,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            21,
+        ),
         monday: 1992-05-18,
         sunday: 1992-05-24,
     },
-    WeekCalendarNumber {
-        week: 1992-W22,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            22,
+        ),
         monday: 1992-05-25,
         sunday: 1992-05-31,
     },
-    WeekCalendarNumber {
-        week: 1992-W23,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            23,
+        ),
         monday: 1992-06-01,
         sunday: 1992-06-07,
     },
-    WeekCalendarNumber {
-        week: 1992-W24,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            24,
+        ),
         monday: 1992-06-08,
         sunday: 1992-06-14,
     },
-    WeekCalendarNumber {
-        week: 1992-W25,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            25,
+        ),
         monday: 1992-06-15,
         sunday: 1992-06-21,
     },
-    WeekCalendarNumber {
-        week: 1992-W26,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            26,
+        ),
         monday: 1992-06-22,
         sunday: 1992-06-28,
     },
-    WeekCalendarNumber {
-        week: 1992-W27,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            27,
+        ),
         monday: 1992-06-29,
         sunday: 1992-07-05,
     },
-    WeekCalendarNumber {
-        week: 1992-W28,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            28,
+        ),
         monday: 1992-07-06,
         sunday: 1992-07-12,
     },
-    WeekCalendarNumber {
-        week: 1992-W29,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            29,
+        ),
         monday: 1992-07-13,
         sunday: 1992-07-19,
     },
-    WeekCalendarNumber {
-        week: 1992-W30,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            30,
+        ),
         monday: 1992-07-20,
         sunday: 1992-07-26,
     },
-    WeekCalendarNumber {
-        week: 1992-W31,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            31,
+        ),
         monday: 1992-07-27,
         sunday: 1992-08-02,
     },
-    WeekCalendarNumber {
-        week: 1992-W32,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            32,
+        ),
         monday: 1992-08-03,
         sunday: 1992-08-09,
     },
-    WeekCalendarNumber {
-        week: 1992-W33,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            33,
+        ),
         monday: 1992-08-10,
         sunday: 1992-08-16,
     },
-    WeekCalendarNumber {
-        week: 1992-W34,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            34,
+        ),
         monday: 1992-08-17,
         sunday: 1992-08-23,
     },
-    WeekCalendarNumber {
-        week: 1992-W35,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            35,
+        ),
         monday: 1992-08-24,
         sunday: 1992-08-30,
     },
-    WeekCalendarNumber {
-        week: 1992-W36,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            36,
+        ),
         monday: 1992-08-31,
         sunday: 1992-09-06,
     },
-    WeekCalendarNumber {
-        week: 1992-W37,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            37,
+        ),
         monday: 1992-09-07,
         sunday: 1992-09-13,
     },
-    WeekCalendarNumber {
-        week: 1992-W38,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            38,
+        ),
         monday: 1992-09-14,
         sunday: 1992-09-20,
     },
-    WeekCalendarNumber {
-        week: 1992-W39,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            39,
+        ),
         monday: 1992-09-21,
         sunday: 1992-09-27,
     },
-    WeekCalendarNumber {
-        week: 1992-W40,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            40,
+        ),
         monday: 1992-09-28,
         sunday: 1992-10-04,
     },
-    WeekCalendarNumber {
-        week: 1992-W41,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            41,
+        ),
         monday: 1992-10-05,
         sunday: 1992-10-11,
     },
-    WeekCalendarNumber {
-        week: 1992-W42,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            42,
+        ),
         monday: 1992-10-12,
         sunday: 1992-10-18,
     },
-    WeekCalendarNumber {
-        week: 1992-W43,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            43,
+        ),
         monday: 1992-10-19,
         sunday: 1992-10-25,
     },
-    WeekCalendarNumber {
-        week: 1992-W44,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            44,
+        ),
         monday: 1992-10-26,
         sunday: 1992-11-01,
     },
-    WeekCalendarNumber {
-        week: 1992-W45,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            45,
+        ),
         monday: 1992-11-02,
         sunday: 1992-11-08,
     },
-    WeekCalendarNumber {
-        week: 1992-W46,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            46,
+        ),
         monday: 1992-11-09,
         sunday: 1992-11-15,
     },
-    WeekCalendarNumber {
-        week: 1992-W47,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            47,
+        ),
         monday: 1992-11-16,
         sunday: 1992-11-22,
     },
-    WeekCalendarNumber {
-        week: 1992-W48,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            48,
+        ),
         monday: 1992-11-23,
         sunday: 1992-11-29,
     },
-    WeekCalendarNumber {
-        week: 1992-W49,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            49,
+        ),
         monday: 1992-11-30,
         sunday: 1992-12-06,
     },
-    WeekCalendarNumber {
-        week: 1992-W50,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            50,
+        ),
         monday: 1992-12-07,
         sunday: 1992-12-13,
     },
-    WeekCalendarNumber {
-        week: 1992-W51,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            51,
+        ),
         monday: 1992-12-14,
         sunday: 1992-12-20,
     },
-    WeekCalendarNumber {
-        week: 1992-W52,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            52,
+        ),
         monday: 1992-12-21,
         sunday: 1992-12-27,
     },
-    WeekCalendarNumber {
-        week: 1992-W53,
+    WeekCalendar {
+        week_number: ValidatedWeekNumber(
+            53,
+        ),
         monday: 1992-12-28,
         sunday: 1993-01-03,
     },

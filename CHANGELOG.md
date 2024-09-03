@@ -13,7 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- CLI now allows conversion to week number to its corresponding week.
+- Implemented a new CLI subcommand "week-number". It does the following things
+    - Allowing conversion to of a week number to its corresponding week.
+    - Allowing conversion to of 2 week numbers, one as start, the other as the end to their corresponding week.
 
 ## [0.1.3] - 2023.07.02
 
