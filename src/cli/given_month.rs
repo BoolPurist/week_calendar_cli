@@ -1,8 +1,7 @@
 use clap::Args;
 use date_validation_types::units::{ValidatedMonth, ValidatedYear};
-use derive_getters::Getters;
 
-#[derive(Args, Debug, Getters)]
+#[derive(Args, Debug)]
 /// List all calendar weeks in a given month in a given year.
 pub struct GivenMonth {
     #[arg(value_parser = super::to_validated_month)]
@@ -13,4 +12,14 @@ pub struct GivenMonth {
     /// Day of a date. Must be between 1 and 31. If not provided then the current year is
     /// assumed.
     year: Option<ValidatedYear>,
+}
+
+impl GivenMonth {
+    pub fn month(&self) -> Option<ValidatedMonth> {
+        self.month
+    }
+
+    pub fn year(&self) -> Option<ValidatedYear> {
+        self.year
+    }
 }

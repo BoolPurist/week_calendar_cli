@@ -25,12 +25,11 @@ exclude = ["ci_check.sh"]
 
 date_validation_types = { version = "2.0.0", features = ["chrono"] }
 
-chrono = "0.4.26"
-clap = { version = "4.3.9", features = ["derive", "env"] }
-derive-getters = "0.3.0"
+chrono = "0.4.38"
+clap = { version = "4.5.16", features = ["derive", "env"] }
 prettytable = "0.10.0"
 thiserror = "1.0.63"
 
 [dev-dependencies]
-insta = { version = "1.30.0" }
+insta = { version = "1.39.0" }
 pretty_assertions = "1.4.0"

@@ -4,7 +4,8 @@ use date_validation_types::units::ValidatedYear;
 use crate::validated_week_number::ValidatedWeekNumber;
 
 #[derive(Args, Debug)]
-/// Converts given week numbers into their respective week calendars
+/// Converts given week numbers into their respective week calendars.
+///
 /// Value for week numbers are between 1 and 53.
 /// Note: Some years only have 52 week numbers.
 /// If for such year 53 is given then that number is treated as 52.
