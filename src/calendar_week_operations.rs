@@ -1,6 +1,9 @@
 use date_validation_types::units::ValidatedYear;
 
-use crate::{chrono_utils, cli::WeekNumberCliParams, WeekCalendar};
+use crate::{
+    chrono_utils, cli::WeekNumberCliParams, validated_week_number::ValidatedWeekNumber,
+    WeekCalendar,
+};
 
 pub type WeeksOfCalendar = Vec<WeekCalendar>;
 
@@ -9,16 +12,27 @@ pub fn operate_on_week_number(given_week_number: WeekNumberCliParams) -> WeeksOf
         chrono_utils::get_current_year()
     }
 
+    fn may_swap_if_end_greater_start(
+        start: ValidatedWeekNumber,
+        end: ValidatedWeekNumber,
+    ) -> (ValidatedWeekNumber, ValidatedWeekNumber) {
+        if start > end {
+            (end, start)
+        } else {
+            (start, end)
+        }
+    }
+
     let start = given_week_number.start();
 
-    match (given_week_number.year(), given_week_number.end()) {
-        (None, None) => {
-            vec![WeekCalendar::new_week_number(start, current_year())]
-        }
-        (Some(year), None) => {
+    let year = given_week_number.year().unwrap_or_else(current_year);
+    match given_week_number.end() {
+        None => {
             vec![WeekCalendar::new_week_number(start, year)]
         }
-        (None, Some(end)) => WeekCalendar::between_week_numbers(start, end, current_year()),
-        (Some(year), Some(end)) => WeekCalendar::between_week_numbers(start, end, year),
+        Some(end) => {
+            let (start, end) = may_swap_if_end_greater_start(start, end);
+            WeekCalendar::between_week_numbers(start, end, year)
+        }
     }
 }
