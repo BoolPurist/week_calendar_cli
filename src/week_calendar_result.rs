@@ -10,7 +10,7 @@ pub struct WeekCalendarDisplay {
 
 impl From<WeekCalendarNumber> for WeekCalendarDisplay {
     fn from(value: WeekCalendarNumber) -> Self {
-        let week = *value.week();
+        let week = value.week_number();
         let start_week = (*value.monday()).to_string();
         let end_week = (*value.sunday()).to_string();
 

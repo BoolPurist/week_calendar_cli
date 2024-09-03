@@ -4,7 +4,8 @@ use chrono::{Datelike, Local, NaiveDate};
 use clap::Parser;
 use date_validation_types::prelude::*;
 use week_calendar::cli::{CliApp, SubCommands};
-use week_calendar::{WeekCalendarDisplay, WeekCalendarNumber};
+use week_calendar::{chrono_utils, WeekCalendarDisplay, WeekCalendarNumber};
+
 fn main() -> ExitCode {
     let cli_args = CliApp::parse();
     let output = handle_sub_command(cli_args);
@@ -53,6 +54,19 @@ fn handle_sub_command(cli_args: CliApp) -> Result<String, Box<dyn std::error::Er
 
             dates
         }
+        SubCommands::WeekNumber(week_number) => match (week_number.year(), week_number.end()) {
+            (None, None) => {
+                let current_year = chrono_utils::get_current_year();
+                vec![
+                    WeekCalendarNumber::new_week_number(week_number.start(), current_year).unwrap(),
+                ]
+            }
+            (Some(year), None) => {
+                vec![WeekCalendarNumber::new_week_number(week_number.start(), year).unwrap()]
+            }
+            (None, Some(_)) => todo!(),
+            (Some(_), Some(_)) => todo!(),
+        },
     }
     .into_iter()
     .map(WeekCalendarDisplay::from);

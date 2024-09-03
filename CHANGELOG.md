@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+### Fixed
+
+- First week number is accosted with a last week of the previous year according to the ISO 8601. 
+
+### Added
+
+- CLI now allows conversion to week number to its corresponding week.
+
 ## [0.1.3] - 2023.07.02
 
 ### Added 

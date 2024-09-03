@@ -2,8 +2,10 @@ use prettytable::{row, Row, Table};
 
 pub use week_calendar_result::WeekCalendarDisplay;
 pub use week_with_calendar_number::WeekCalendarNumber;
+pub mod chrono_utils;
 pub mod cli;
 
+mod validated_week_number;
 mod week_calendar_result;
 mod week_with_calendar_number;
 

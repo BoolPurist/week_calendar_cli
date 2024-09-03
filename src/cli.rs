@@ -5,8 +5,10 @@ use date_validation_types::units::{
 
 mod given_date;
 mod given_month;
+mod given_week_number;
 mod given_year;
 pub use given_date::GivenDate;
+use given_week_number::GivenWeekNumber;
 pub use given_year::GivenYear;
 
 use self::given_month::GivenMonth;
@@ -36,6 +38,8 @@ pub enum SubCommands {
     Month(GivenMonth),
     #[command(visible_alias = "y")]
     Year(GivenYear),
+    #[command(visible_alias = "w")]
+    WeekNumber(GivenWeekNumber),
 }
 
 pub fn to_validated_day(input: &str) -> Result<ValidatedDay, String> {

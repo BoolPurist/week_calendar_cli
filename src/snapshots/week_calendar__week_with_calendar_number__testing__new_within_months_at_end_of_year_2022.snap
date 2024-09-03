@@ -4,27 +4,27 @@ expression: actual
 ---
 [
     WeekCalendarNumber {
-        week: 48,
+        week: 2022-W48,
         monday: 2022-11-28,
         sunday: 2022-12-04,
     },
     WeekCalendarNumber {
-        week: 49,
+        week: 2022-W49,
         monday: 2022-12-05,
         sunday: 2022-12-11,
     },
     WeekCalendarNumber {
-        week: 50,
+        week: 2022-W50,
         monday: 2022-12-12,
         sunday: 2022-12-18,
     },
     WeekCalendarNumber {
-        week: 51,
+        week: 2022-W51,
         monday: 2022-12-19,
         sunday: 2022-12-25,
     },
     WeekCalendarNumber {
-        week: 52,
+        week: 2022-W52,
         monday: 2022-12-26,
         sunday: 2023-01-01,
     },
