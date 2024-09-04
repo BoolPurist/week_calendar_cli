@@ -96,4 +96,6 @@ This application can be used under MIT or Apache 2.0 at your choice
 
 ## Detailed Manual with Examples
 
+```txt
 {{MANUAL}}
+```

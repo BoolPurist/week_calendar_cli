@@ -102,6 +102,7 @@ This application can be used under MIT or Apache 2.0 at your choice
 
 ## Detailed Manual with Examples
 
+```txt
 "week_calendar" is a command line tool which shows calendar weeks. 
 
 It provides the number and start/end date of a week.
@@ -243,3 +244,4 @@ Output:
 +-------------+------------+------------+
 | 10          | 2024-03-04 | 2024-03-10 |
 +-------------+------------+------------+
+```
