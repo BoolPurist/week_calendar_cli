@@ -6,6 +6,9 @@ pub mod chrono_utils;
 pub mod cli;
 
 pub mod calendar_week_operations;
+
+pub(crate) mod macros;
+
 mod simple_parseable_week_calendar;
 mod validated_week_number;
 mod week_with_calendar_number;

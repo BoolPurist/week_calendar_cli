@@ -1,17 +1,18 @@
-use clap::{Parser, Subcommand};
-use date_validation_types::units::{
-    InvalidDay, InvalidMonth, InvalidYear, ValidatedDay, ValidatedMonth, ValidatedYear,
-};
+pub use given_date::GivenDate;
+pub use given_week_number::WeekNumberCliParams;
+pub use given_year::GivenYear;
+pub use sub_commands::SubCommands;
 
 mod given_date;
 mod given_month;
 mod given_week_number;
 mod given_year;
-pub use given_date::GivenDate;
-pub use given_week_number::WeekNumberCliParams;
-pub use given_year::GivenYear;
+mod sub_commands;
 
-use self::given_month::GivenMonth;
+use clap::Parser;
+use date_validation_types::units::{
+    InvalidDay, InvalidMonth, InvalidYear, ValidatedDay, ValidatedMonth, ValidatedYear,
+};
 
 #[derive(Parser)]
 #[command(author = "BoolPurist", version)]
@@ -25,21 +26,6 @@ pub struct CliApp {
     pub for_machine: bool,
     #[command(subcommand)]
     pub sub_command: SubCommands,
-}
-
-#[derive(Debug, Subcommand)]
-pub enum SubCommands {
-    /// Shows calendar week for today
-    #[command(visible_alias = "t")]
-    Today,
-    #[command(visible_alias = "d")]
-    Date(GivenDate),
-    #[command(visible_alias = "m")]
-    Month(GivenMonth),
-    #[command(visible_alias = "y")]
-    Year(GivenYear),
-    #[command(visible_alias = "w")]
-    WeekNumber(WeekNumberCliParams),
 }
 
 pub fn to_validated_day(input: &str) -> Result<ValidatedDay, String> {
