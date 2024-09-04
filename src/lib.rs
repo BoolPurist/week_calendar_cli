@@ -7,7 +7,7 @@ pub mod cli;
 
 pub mod calendar_week_operations;
 
-pub(crate) mod macros;
+pub mod macros;
 
 mod simple_parseable_week_calendar;
 mod validated_week_number;

@@ -1,0 +1,6 @@
+"week_calendar" is a command line tool which shows calendar weeks. 
+
+It provides the number and start/end date of a week.
+
+Different intervals can be chosen. Year, month, or just one specific week.
+You can also convert week numbers into their respective weeks.

@@ -15,7 +15,7 @@ macro_rules! PATH_SEPARATOR {
 
 #[allow(unused)]
 macro_rules! PATH_OF {
-    ($($comp:expr),+ ; $tail:expr) => {
+    ($($comp:expr),+ => $tail:expr) => {
         concat!(env!("CARGO_MANIFEST_DIR"),PATH_SEPARATOR!(),$($comp, PATH_SEPARATOR!()),+, $tail)
     };
 }

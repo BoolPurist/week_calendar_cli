@@ -1,6 +1,10 @@
-Lists calendar week at a certain time or in a monthly/yearly interveral.
+"week_calendar" is a command line tool which shows calendar weeks. 
 
-Source code and example of usage can be found at: https://github.com/BoolPurist/week_calendar_cli
+It provides the number and start/end date of a week.
+
+Different intervals can be chosen. Year, month, or just one specific week.
+You can also convert week numbers into their respective weeks.
+
 
 Usage: week_calendar [OPTIONS] <COMMAND>
 
@@ -23,6 +27,16 @@ Options:
 
   -V, --version
           Print version
+
+SOURCE CODE:
+
+https://github.com/BoolPurist/week_calendar_cli
+
+LICENSE:
+
+This application can be used under MIT or Apache 2.0 at your choice
+For more details see the license file within source code base 
+on GitHub.
 
 ----------------------------------------------------------------------------------------------------
 

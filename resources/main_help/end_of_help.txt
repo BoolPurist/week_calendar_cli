@@ -1,0 +1,9 @@
+SOURCE CODE:
+
+https://github.com/BoolPurist/week_calendar_cli
+
+LICENSE:
+
+This application can be used under MIT or Apache 2.0 at your choice
+For more details see the license file within source code base 
+on GitHub. 

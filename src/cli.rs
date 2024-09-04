@@ -9,16 +9,19 @@ mod given_week_number;
 mod given_year;
 mod sub_commands;
 
+use crate::macros::*;
 use clap::{CommandFactory, Parser};
 use date_validation_types::units::{
     InvalidDay, InvalidMonth, InvalidYear, ValidatedDay, ValidatedMonth, ValidatedYear,
 };
 
 #[derive(Parser)]
-#[command(author = "BoolPurist", version)]
-/// Lists calendar week at a certain time or in a monthly/yearly interveral.
-///
-/// Source code and example of usage can be found at: https://github.com/BoolPurist/week_calendar_cli
+#[command(
+    author = "BoolPurist", 
+    version,  
+    after_long_help = include_str!(PATH_OF!("resources","main_help"=>"end_of_help.txt")),
+    about = include_str!(PATH_OF!("resources","main_help"=>"about.txt"))
+)]
 pub struct CliApp {
     /// Data entry about week calendar are outputted with spaces between.
     /// This is intended to make parsing of the date easier.

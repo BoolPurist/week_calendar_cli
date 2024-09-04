@@ -6,7 +6,7 @@ checksum := release_folder / "checksum_sha256.txt"
 
 # Executes all commands which should be before any push or pull request
 # These steps should be executed within a CI too.
-ci: format_check test lint spelling generate_manual
+ci: format_check test lint spelling
   
 # Runs static analyses to improve code quality
 lint:
@@ -21,9 +21,12 @@ test:
   
 spelling:
   typos
+
+generate_manual:
+  cargo xtask generate-manual
   
-generate_manual: 
-  cargo xtask
+build_readme: generate_manual
+  cargo xtask build-readme
 
 local-install:
   cargo install --path . --force
