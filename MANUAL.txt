@@ -1,6 +1,6 @@
 Lists calendar week at a certain time or in a monthly/yearly interveral.
 
-Source code and example of useage can be found at: https://github.com/BoolPurist/week_calendar_cli
+Source code and example of usage can be found at: https://github.com/BoolPurist/week_calendar_cli
 
 Usage: week_calendar [OPTIONS] <COMMAND>
 
@@ -14,7 +14,7 @@ Commands:
 
 Options:
   -f, --for-machine
-          Data entry about week calendar are outputed with spaces between. This is intended to make parsing of the date easier
+          Data entry about week calendar are outputted with spaces between. This is intended to make parsing of the date easier
           
           [env: WEEK_CALENDAR_FOR_MACHINE=]
 
@@ -84,7 +84,7 @@ List all calendar weeks in a given year. If no year is provided then the current
 Usage: week_calendar year [YEAR]
 
 Arguments:
-  [YEAR]  Given year. If omited then the current year is assumed
+  [YEAR]  Given year. If omitted then the current year is assumed
 
 Options:
   -h, --help  Print help

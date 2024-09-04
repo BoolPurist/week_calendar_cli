@@ -68,7 +68,7 @@ which is in your PATH environmental variable.
 
 ### Install from crates.io
 
-This appliaction is also published on this [page](https://crates.io/crates/week_calendar) of crates.io 
+This application is also published on this [page](https://crates.io/crates/week_calendar) of crates.io 
 
 You can install via 
 ```sh

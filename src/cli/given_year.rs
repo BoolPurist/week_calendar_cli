@@ -6,7 +6,7 @@ use date_validation_types::units::ValidatedYear;
 /// assumed
 pub struct GivenYear {
     #[arg(value_parser = super::to_validated_year)]
-    /// Given year. If omited then the current year is assumed.
+    /// Given year. If omitted then the current year is assumed.
     year: Option<ValidatedYear>,
 }
 

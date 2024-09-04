@@ -213,7 +213,7 @@ mod testing {
     }
 
     #[test]
-    fn new_within_monts() {
+    fn new_within_months() {
         let actual = WeekCalendar::all_new_in_month(ValidatedDate::from_ymd(2023, 6, 30).unwrap());
         insta::assert_debug_snapshot!(actual);
     }

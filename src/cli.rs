@@ -18,9 +18,9 @@ use date_validation_types::units::{
 #[command(author = "BoolPurist", version)]
 /// Lists calendar week at a certain time or in a monthly/yearly interveral.
 ///
-/// Source code and example of useage can be found at: https://github.com/BoolPurist/week_calendar_cli
+/// Source code and example of usage can be found at: https://github.com/BoolPurist/week_calendar_cli
 pub struct CliApp {
-    /// Data entry about week calendar are outputed with spaces between.
+    /// Data entry about week calendar are outputted with spaces between.
     /// This is intended to make parsing of the date easier.
     #[arg(short, long, env = "WEEK_CALENDAR_FOR_MACHINE")]
     pub for_machine: bool,
@@ -33,7 +33,6 @@ impl CliApp {
         CliApp::command()
             .get_subcommands()
             .map(|next| next.get_name().to_string())
-            .into_iter()
             .collect()
     }
 }

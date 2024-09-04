@@ -35,7 +35,7 @@ pub fn calc_max_week_number_in_year(given_year: ValidatedYear) -> ValidatedWeekN
     } else {
         ValidatedWeekNumber::new(might_be_in_next_year)
     }
-    .expect("End of year will end up with 52, 53 or 1. Case 1 is alwasy followed by 52 or 53.")
+    .expect("End of year will end up with 52, 53 or 1. Case 1 is always followed by 52 or 53.")
 }
 
 #[cfg(test)]
