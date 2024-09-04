@@ -18,7 +18,7 @@ use date_validation_types::units::{
 #[derive(Parser)]
 #[command(
     author = "BoolPurist", 
-    version,  
+    version,
     after_long_help = include_str!(PATH_OF!("resources","main_help"=>"end_of_help.txt")),
     about = include_str!(PATH_OF!("resources","main_help"=>"about.txt"))
 )]
