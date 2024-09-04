@@ -4,15 +4,17 @@ release_folder := "release"
 tar_file_name := release_folder / app_name + "_" + linux_gnu_target + ".gz.tar"
 checksum := release_folder / "checksum_sha256.txt"
 
+# Executes all commands which should be before any push or pull request
+# These steps should be executed within a CI too.
 ci: format_check test lint spelling generate_manual
   
 # Runs static analyses to improve code quality
 lint:
-    cargo clippy -- -Dwarnings
+  cargo clippy -- -Dwarnings
 
 # Checks if code is formatted correctly 
 format_check:
-    cargo fmt --check --all
+  cargo fmt --check --all
 
 test: 
   cargo test --all
