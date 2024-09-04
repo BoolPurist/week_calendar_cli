@@ -1,17 +1,14 @@
 EXAMPLES 
 
-Showing the calendar week  with week number 10 of 2024, asssuming the year 2024
+Showing the calendar week with week number 10 of 2024, assuming the year 2024
 
-Command
-```
-week_calendar week-number 10
-```
+Command:
+    week_calendar week-number 10
 
-Expected Output
-```
+Output:
+
 +-------------+------------+------------+
 | Week Number | From       | To         |
 +-------------+------------+------------+
 | 10          | 2024-03-04 | 2024-03-10 |
 +-------------+------------+------------+
-```

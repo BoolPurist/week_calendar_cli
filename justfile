@@ -4,7 +4,8 @@ relase_folder := "release"
 tar_file_name := relase_folder / app_name + "_" + linux_gnu_target + ".gz.tar"
 checksum := relase_folder / "checksum_sha256.txt"
 
-
+generate_manual: 
+  cargo xtask
 
 local-install:
   cargo install --path . --force

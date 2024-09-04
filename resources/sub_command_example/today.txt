@@ -1,0 +1,15 @@
+EXAMPLES:
+
+Show current week calendar 
+
+Command:
+    # today is 04.07.2023. here
+    week_calendar today
+
+Output:
+
++-------------+------------+------------+
+| Week Number | From       | To         |
++-------------+------------+------------+
+| 27          | 2023-07-03 | 2023-07-09 |
++-------------+------------+------------+

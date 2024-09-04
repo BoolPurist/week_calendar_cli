@@ -9,7 +9,7 @@ mod given_week_number;
 mod given_year;
 mod sub_commands;
 
-use clap::Parser;
+use clap::{CommandFactory, Parser};
 use date_validation_types::units::{
     InvalidDay, InvalidMonth, InvalidYear, ValidatedDay, ValidatedMonth, ValidatedYear,
 };
@@ -26,6 +26,16 @@ pub struct CliApp {
     pub for_machine: bool,
     #[command(subcommand)]
     pub sub_command: SubCommands,
+}
+
+impl CliApp {
+    pub fn get_all_subcommand_names() -> Vec<String> {
+        CliApp::command()
+            .get_subcommands()
+            .map(|next| next.get_name().to_string())
+            .into_iter()
+            .collect()
+    }
 }
 
 pub fn to_validated_day(input: &str) -> Result<ValidatedDay, String> {

@@ -27,7 +27,7 @@ macro_rules! PATH_TO_DOCUMENTATION {
             PATH_SEPARATOR!(),
             "resources",
             PATH_SEPARATOR!(),
-            "documentation",
+            "sub_command_example",
             PATH_SEPARATOR!(),
             $tail
         )
