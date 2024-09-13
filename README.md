@@ -1,7 +1,8 @@
 # Purpose
 
-[![Build status](https://github.com/BoolPurist/week_calendar_cli/actions/workflows/ci_check.yml/badge.svg)](https://github.com/boolpurist/week_calendar_cli/actions)
 [![Crates.io](https://img.shields.io/crates/v/week_calendar.svg)](https://crates.io/crates/week_calendar)
+![Spelling_status](https://github.com/BoolPurist/week_calendar_cli/actions/workflows/spelling.yml/badge.svg)
+![CI_status](https://github.com/BoolPurist/week_calendar_cli/actions/workflows/ci_check.yml/badge.svg)
 
 "week_calendar" is a command line tool which shows calendar weeks. 
 
