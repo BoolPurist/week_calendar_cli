@@ -15,7 +15,6 @@ Output:
 ## Show current week calendar 
 
 Examples today is 04.07.2023. 
-
 ```sh
 week_calendar today
 ```

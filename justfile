@@ -5,8 +5,12 @@ tar_file_name := release_folder / app_name + "_" + linux_gnu_target + ".gz.tar"
 checksum := release_folder / "checksum_sha256.txt"
 
 # Executes all commands which should be before any push or pull request
-# These steps should be executed within a CI too.
-ci: format_check test lint spelling
+check_all: ci spelling
+
+# These steps should be executed within a CI.
+# Note: have to keep spelling outside the CI check.
+# Reason => Typos is not locatable by just even under the usage of the official action of typos
+ci: format_check test lint
   
 # Runs static analyses to improve code quality
 lint:

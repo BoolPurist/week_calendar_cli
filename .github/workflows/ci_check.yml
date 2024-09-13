@@ -1,19 +1,24 @@
 name: "Format check, Clippy and unit tests in rust" 
 on: 
   push: 
+    branches: [ $default-branch ]
     paths-ignore:
       - '**.md'
   pull_request:  
+    branches: [ $default-branch ]
     paths-ignore:
       - '**.md'
         
 jobs:
-  rust_check_lint_format_tests:
-    name: "cargo fmt check, clippy, test"
+  checks_via_just:
+    name: "Check formating, linting, unit tests and spelling"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-      - run: ./ci_check.sh
+      - uses: extractions/setup-just@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: just ci
